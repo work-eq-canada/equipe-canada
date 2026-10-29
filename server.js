@@ -7,6 +7,7 @@ const FormData = require('form-data');
 
 const app = express();
 app.use(cors());
+app.use(express.json()); // <-- ADD THIS LINE BACK IN
 
 // Configure Multer to store uploaded files in memory temporarily
 const upload = multer({ storage: multer.memoryStorage() });
