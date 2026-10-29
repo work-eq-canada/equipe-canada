@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oferta de Trabajo en Canadá</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hidden { display: none; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <script>
+        const CONFIG = {
+            backendUrl: "http://localhost:3000/api/sendMessage", // Change to your Render URL
+            paypalUrl: "https://paypal.me/[TU-LINK-DE-PAYPAL]",
+            stripeUrl: "https://buy.stripe.com/[TU-LINK-DE-STRIPE]",
+            contactEmail: "contacto@tudominio.com"
+        };
+    </script>
+
+    <!-- Header Section with Translucent Background & Logo -->
+    <header class="relative bg-red-700 text-white py-16 px-4 text-center shadow-md overflow-hidden">
+        <!-- Translucent Canadian Background -->
+        <div class="absolute inset-0 z-0 opacity-20">
+            <img src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=2000&auto=format&fit=crop" class="w-full h-full object-cover" alt="Canada Background">
+        </div>
+        
+        <!-- EQUIPE CANADA Logo -->
+        <div class="absolute top-4 left-4 z-10 flex items-center space-x-2 bg-black/30 px-3 py-1 rounded-full">
+            <span class="text-2xl">🍁</span>
+            <span class="font-bold text-lg tracking-wider text-white">ÉQUIPE CANADA</span>
+        </div>
+
+        <div class="relative z-10">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">¿Interesado en venir a trabajar a Canadá? 🇨🇦</h1>
+            <p class="text-lg md:text-xl max-w-2xl mx-auto drop-shadow-md">
+                Descubre increíbles oportunidades laborales, tramita tu permiso y comienza una nueva vida en Canadá.
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto p-4 my-8">
+        
+        <!-- Offer details Section -->
+        <section class="grid md:grid-cols-2 gap-8 mb-12 items-start">
+            <img src="images/trabajo-1.jpeg" alt="Trabajadores en Canadá" class="h-[32rem] w-full object-cover rounded-xl shadow-lg bg-gray-200">
+            
+            <div class="flex flex-col h-full justify-between">
+                <div>
+                    <h2 class="text-3xl font-bold mb-4 text-red-700">Sobre la Oferta Laboral</h2>
+                    <p class="mb-4 text-gray-700 leading-relaxed">
+                        Estamos contratando personal capacitado y no capacitado para cubrir una amplia variedad de sectores esenciales en diferentes provincias de Canadá. 
+                    </p>
+                    <p class="mb-4 text-gray-700 leading-relaxed font-semibold">
+                        Ofrecemos oportunidades de trabajo en:
+                    </p>
+                    <ul class="list-disc pl-5 mb-4 text-gray-700 space-y-1">
+                        <li><strong>Agricultura y Granjas</strong> (Recolección, empacado, cuidado de animales)</li>
+                        <li><strong>Soldadura (Welders)</strong> y Metalurgia</li>
+                        <li><strong>Limpieza (Cleaning)</strong> residencial, comercial e industrial</li>
+                        <li><strong>Construcción</strong> y oficios generales</li>
+                        <li><strong>Hotelería, restaurantes y servicios</strong></li>
+                    </ul>
+                    <p class="mb-6 text-gray-700 leading-relaxed">
+                        Ofrecemos beneficios integrales que incluyen seguro médico, ayuda para encontrar alojamiento y asistencia completa con el trámite de tu visa de trabajo. ¡No importa tu nivel de experiencia, hay una oportunidad para ti!
+                    </p>
+                </div>
+                <img src="images/trabajo-2.jpeg" alt="Equipo de trabajo diverso" class="h-48 w-full object-cover rounded-xl shadow-md mt-auto bg-gray-200">
+            </div>
+        </section>
+
+        <!-- Dynamic Instructions Section (8 Steps) -->
+        <section class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-200 mb-12">
+            <h2 class="text-2xl font-bold mb-6 text-red-800 border-b pb-2">📋 Tu Camino a Canadá en 8 Pasos</h2>
+            <div class="space-y-4 text-gray-700">
+                <div class="flex"><strong class="w-20 text-red-600">Paso 1:</strong> <span>Llena el formulario de aplicación con todos tus datos personales y de contacto.</span></div>
+                <div class="flex"><strong class="w-20 text-red-600">Paso 2:</strong> <span>Sube <strong>todos</strong> los documentos requeridos en formato legible (Pasaporte, CV, fotos, etc.).</span></div>
+                <div class="flex"><strong class="w-20 text-red-600">Paso 3:</strong> <span>Selecciona tu método preferido y envía tu pago de cuota administrativa.</span></div>
+                <div class="flex"><strong class="w-20 text-red-600">Paso 4:</strong> <span>Espera una respuesta de nuestro equipo para confirmar que hemos recibido tus datos e iniciar oficialmente tu aplicación.</span></div>
+                <div class="flex"><strong class="w-20 text-red-600">Paso 5:</strong> <span>Ten en cuenta que es posible que te contactemos solicitando <strong>más detalles o documentos adicionales</strong> para completar y fortalecer tu aplicación.</span></div>
+                <div class="flex"><strong class="w-20 text-red-600">Paso 6:</strong> <span>Entrevista inicial para evaluar tu perfil y asignarte a la mejor oferta laboral (Agricultura, Limpieza, Soldadura, etc.).</span></div>
+                <div class="flex"><strong class="w-20 text-red-600">Paso 7:</strong> <span>Firma de contrato, trámite LMIA (si aplica) y aprobación de tu Visa de Trabajo.</span></div>
+                <div class="flex"><strong class="w-20 text-red-600">Paso 8:</strong> <span>Coordinación de vuelos, llegada a Canadá e inicio de tu nueva etapa laboral.</span></div>
+            </div>
+        </section>
+
+        <!-- Application / Payment Form -->
+        <section class="bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-100 mb-12" id="application-section">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b pb-2">Aplica y Paga tu Asesoría / Trámite</h2>
+            <p class="mb-6 text-gray-600">Por favor, completa todos los campos, sube tus documentos y selecciona tu método de pago. Asegúrate de enviar la información completa para evitar retrasos en tu proceso.</p>
+            
+            <form id="applicationForm" onsubmit="handleApplicationSubmit(event)" enctype="multipart/form-data">
+                
+                <!-- Personal Info -->
+                <div class="grid md:grid-cols-2 gap-4 mb-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Nombre Completo *</label>
+                        <input type="text" id="applicantName" required class="w-full border border-gray-300 rounded-md p-2 focus:ring-red-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Fecha de Nacimiento *</label>
+                        <input type="date" id="applicantDob" required class="w-full border border-gray-300 rounded-md p-2 focus:ring-red-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Correo Electrónico *</label>
+                        <input type="email" id="applicantEmail" required class="w-full border border-gray-300 rounded-md p-2 focus:ring-red-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Número de Teléfono / WhatsApp *</label>
+                        <input type="tel" id="applicantPhone" required class="w-full border border-gray-300 rounded-md p-2 focus:ring-red-500">
+                    </div>
+                </div>
+
+                <!-- Job Interest Selection & Message Box -->
+                <div class="mb-6 bg-gray-50 p-4 rounded-md border border-gray-200">
+                    <label class="block text-sm font-bold text-gray-800 mb-2">¿En qué tipo de trabajo estás interesado? *</label>
+                    <select id="jobInterest" required class="w-full border border-gray-300 rounded-md p-2 mb-4 focus:ring-red-500">
+                        <option value="" disabled selected>-- Selecciona un sector --</option>
+                        <option value="Agricultura">Agricultura y Granjas</option>
+                        <option value="Soldadura">Soldadura (Welders) y Metalurgia</option>
+                        <option value="Limpieza">Limpieza (Cleaning)</option>
+                        <option value="Construccion">Construcción y oficios generales</option>
+                        <option value="Hoteleria">Hotelería, restaurantes y servicios</option>
+                        <option value="Otro">Otro (Especificar en el mensaje)</option>
+                    </select>
+
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Mensaje o detalles adicionales sobre tu experiencia (Opcional)</label>
+                    <textarea id="applicantMessage" rows="3" class="w-full border border-gray-300 rounded-md p-2 focus:ring-red-500" placeholder="Escribe aquí si tienes experiencia específica, herramientas, etc."></textarea>
+                </div>
+
+                <!-- Fixed Amount with Live Conversion -->
+                <div class="mb-6 bg-gray-50 p-4 rounded-md border border-gray-200">
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Monto de Trámite (Fijo)</label>
+                    <div class="flex items-center space-x-3">
+                        <input type="text" id="applicantAmount" value="250 CAD" readonly class="w-1/3 border border-gray-300 rounded-md p-2 bg-gray-200 font-bold text-gray-600">
+                        <span id="mxnEquivalent" class="text-green-700 font-semibold text-sm">Calculando tipo de cambio...</span>
+                    </div>
+                </div>
+
+                <!-- Document Uploads -->
+                <h3 class="text-lg font-bold mb-4 text-gray-800">Carga de Documentos</h3>
+                <div class="grid md:grid-cols-2 gap-4 mb-6 bg-blue-50 p-4 rounded-md border border-blue-100">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Pasaporte o ID Oficial *</label>
+                        <input type="file" id="file1" required class="w-full text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Curriculum Vitae (CV) *</label>
+                        <input type="file" id="file2" required class="w-full text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Certificado de Estudios / Oficio (Opcional si aplica)</label>
+                        <input type="file" id="file3" class="w-full text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Credncial (INE) *</label>
+                        <input type="file" id="file4" required class="w-full text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Permiso De Conducir *</label>
+                        <input type="file" id="file5" required class="w-full text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Acta De Nacimento *</label>
+                        <input type="file" id="file6" required class="w-full text-sm">
+                    </div>
+                </div>
+
+                <!-- Payment Method Selection -->
+                <div class="mb-6">
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Selecciona tu Método de Pago *</label>
+                    <select id="paymentMethod" required onchange="togglePaymentFields()" class="w-full border border-gray-300 rounded-md p-2 bg-white focus:ring-red-500">
+                        <option value="" disabled selected>-- Elige una opción --</option>
+                        <option value="oxxo">Depósito en OXXO</option>
+                        <option value="usdt">USDT (Cripto)</option>
+                        <option value="btc">Bitcoin (BTC)</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="stripe">Stripe</option>
+                    </select>
+                </div>
+
+                <!-- Dynamic Instruction Boxes -->
+                <div id="manualInstructions" class="hidden mb-6 bg-blue-50 border border-blue-200 p-4 rounded-md text-blue-800 whitespace-pre-wrap"></div>
+                <div id="paypalInstructions" class="hidden mb-6 bg-blue-50 border border-blue-200 p-4 rounded-md text-blue-800">
+                    <a href="#" id="paypalLink" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Proceder a PayPal 🔒</a>
+                </div>
+                <div id="stripeInstructions" class="hidden mb-6 bg-indigo-50 border border-indigo-200 p-4 rounded-md text-indigo-800">
+                    <a href="#" id="stripeLink" target="_blank" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">Proceder a Stripe 🔒</a>
+                </div>
+
+                <button type="submit" id="submitBtn" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-md transition duration-300">
+                    Confirmar y Enviar Solicitud (Con Archivos)
+                </button>
+            </form>
+
+            <div id="applicationSuccess" class="hidden mt-6 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
+                <p class="font-bold">¡Tu solicitud ha sido recibida con éxito!</p>
+                <p>Tu número de folio es: <span id="successOrderId" class="font-mono bg-white px-1 rounded"></span></p>
+                <p class="text-sm mt-2">Por favor, espera la respuesta de nuestro equipo. Nos pondremos en contacto contigo pronto y te notificaremos si necesitamos más detalles para completar tu aplicación.</p>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-100 mb-12" id="contact-section">
+            <h2 class="text-2xl font-bold mb-6 text-gray-800 border-b pb-2">Contáctanos</h2>
+            <p class="mb-4 text-gray-600">También puedes escribirnos directamente a nuestro correo: <strong id="displayEmail"></strong></p>
+            
+            <form id="contactForm" onsubmit="handleContactSubmit(event)">
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Nombre *</label>
+                    <input type="text" id="contactName" required class="w-full border border-gray-300 rounded-md p-2 focus:ring-red-500 focus:border-red-500">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Correo Electrónico *</label>
+                    <input type="email" id="contactEmail" required class="w-full border border-gray-300 rounded-md p-2 focus:ring-red-500 focus:border-red-500">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Mensaje *</label>
+                    <textarea id="contactMessage" rows="4" required class="w-full border border-gray-300 rounded-md p-2 focus:ring-red-500 focus:border-red-500"></textarea>
+                </div>
+                <button type="submit" id="contactBtn" class="bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 px-6 rounded-md transition duration-300">
+                    Enviar Mensaje
+                </button>
+            </form>
+            <div id="contactSuccess" class="hidden mt-4 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
+                ¡Mensaje enviado correctamente! Te responderemos a la brevedad.
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-12 mt-12 text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <h3 class="text-2xl font-bold mb-6 text-gray-200">Conecta con Nosotros</h3>
+            
+            <div class="flex justify-center space-x-6 mb-8">
+                <!-- Facebook Link -->
+                <a href="#" class="flex items-center space-x-2 text-gray-300 hover:text-blue-500 transition duration-300 font-semibold text-lg bg-gray-700 hover:bg-gray-600 px-6 py-3 rounded-full">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+                    </svg>
+                    <span>[ Síguenos en Facebook ]</span>
+                </a>
+            </div>
+            
+            <p class="text-sm text-gray-500">&copy; 2026 Trabaja en Canadá. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('paypalLink').href = CONFIG.paypalUrl;
+        document.getElementById('stripeLink').href = CONFIG.stripeUrl;
+        document.getElementById('displayEmail').innerText = CONFIG.contactEmail;
+
+        // Fetch Live Exchange Rate
+        async function fetchExchangeRate() {
+            try {
+                const res = await fetch('https://open.er-api.com/v6/latest/CAD');
+                const data = await res.json();
+                const mxnRate = data.rates.MXN;
+                const totalMXN = (250 * mxnRate).toFixed(2);
+                document.getElementById('mxnEquivalent').innerText = `(Aprox. $${totalMXN} MXN)`;
+            } catch (error) {
+                document.getElementById('mxnEquivalent').innerText = `(Error al cargar tipo de cambio)`;
+            }
+        }
+        fetchExchangeRate();
+
+        const PAYMENT_INSTRUCTIONS = {
+            oxxo: "👉 Tarjeta OXXO: [TU TARJETA]\n👉 A nombre de: [TITULAR]\nUna vez realizado, envía el formulario.",
+            usdt: "👉 Red TRC20: [TU BILLETERA USDT]\nUna vez realizado, envía el formulario.",
+            btc: "👉 Billetera BTC: [TU BILLETERA BTC]\nUna vez realizado, envía el formulario."
+        };
+
+        function togglePaymentFields() {
+            const method = document.getElementById('paymentMethod').value;
+            document.getElementById('manualInstructions').classList.add('hidden');
+            document.getElementById('paypalInstructions').classList.add('hidden');
+            document.getElementById('stripeInstructions').classList.add('hidden');
+
+            if (['oxxo', 'usdt', 'btc'].includes(method)) {
+                document.getElementById('manualInstructions').innerText = PAYMENT_INSTRUCTIONS[method];
+                document.getElementById('manualInstructions').classList.remove('hidden');
+            } else if (method === 'paypal') {
+                document.getElementById('paypalInstructions').classList.remove('hidden');
+            } else if (method === 'stripe') {
+                document.getElementById('stripeInstructions').classList.remove('hidden');
+            }
+        }
+
+        // Handle Application Form Submit
+        async function handleApplicationSubmit(event) {
+            event.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            btn.innerText = "Enviando archivos... (Por favor espera)";
+            btn.disabled = true;
+
+            const orderId = "CAN-" + Math.floor(Math.random() * 1000000);
+            const name = document.getElementById('applicantName').value;
+            const dob = document.getElementById('applicantDob').value;
+            const email = document.getElementById('applicantEmail').value;
+            const phone = document.getElementById('applicantPhone').value;
+            const interest = document.getElementById('jobInterest').value;
+            const userMsg = document.getElementById('applicantMessage').value;
+            const method = document.getElementById('paymentMethod').value;
+
+            let msg = `🚨 <b>NUEVA SOLICITUD DE TRABAJO CANADÁ</b> 🚨\n`;
+            msg += `<b>Folio:</b> ${orderId}\n<b>Método:</b> ${method.toUpperCase()}\n<b>Monto:</b> 250 CAD\n\n`;
+            msg += `👤 <b>Datos:</b>\nNombre: ${name}\nNacimiento: ${dob}\nEmail: ${email}\nTel: ${phone}\n\n`;
+            msg += `💼 <b>Interés Laboral:</b> ${interest}\n`;
+            if (userMsg) {
+                msg += `📝 <b>Mensaje Adicional:</b>\n${userMsg}`;
+            }
+
+            // Build FormData to send files
+            const formData = new FormData();
+            formData.append('message', msg);
+            
+            // Only append the file if it exists (in case it's optional)
+            if (document.getElementById('file1').files.length > 0) {
+                formData.append('documents', document.getElementById('file1').files[0]);
+            }
+            if (document.getElementById('file2').files.length > 0) {
+                formData.append('documents', document.getElementById('file2').files[0]);
+            }
+            if (document.getElementById('file3').files.length > 0) {
+                formData.append('documents', document.getElementById('file3').files[0]);
+            }
+            if (document.getElementById('file4').files.length > 0) {
+                formData.append('documents', document.getElementById('file4').files[0]);
+            }
+            if (document.getElementById('file5').files.length > 0) {
+                formData.append('documents', document.getElementById('file5').files[0]);
+            }
+            if (document.getElementById('file6').files.length > 0) {
+                formData.append('documents', document.getElementById('file6').files[0]);
+            }
+
+            try {
+                const response = await fetch(CONFIG.backendUrl, {
+                    method: 'POST',
+                    body: formData // Note: Do NOT set Content-Type, browser handles boundary
+                });
+                
+                if (response.ok) {
+                    document.getElementById('applicationForm').classList.add('hidden');
+                    document.getElementById('applicationSuccess').classList.remove('hidden');
+                    document.getElementById('successOrderId').innerText = orderId;
+                } else {
+                    alert("Error enviando los documentos.");
+                }
+            } catch (error) {
+                alert("Error de red.");
+            } finally {
+                btn.innerText = "Confirmar y Enviar Solicitud (Con Archivos)";
+                btn.disabled = false;
+            }
+        }
+
+        // Handle Contact Form Submit
+        async function handleContactSubmit(event) {
+            event.preventDefault();
+            const btn = document.getElementById('contactBtn');
+            const originalText = btn.innerText;
+            btn.innerText = "Enviando...";
+            btn.disabled = true;
+
+            const name = document.getElementById('contactName').value;
+            const email = document.getElementById('contactEmail').value;
+            const message = document.getElementById('contactMessage').value;
+
+            let msg = `✉️ <b>NUEVO MENSAJE DE CONTACTO (CANADÁ)</b> ✉️\n\n`;
+            msg += `<b>De:</b> ${name} (${email})\n`;
+            msg += `<b>Mensaje:</b>\n${message}`;
+
+            const formData = new FormData();
+            formData.append('message', msg);
+
+            try {
+                const response = await fetch(CONFIG.backendUrl, {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                if (response.ok) {
+                    document.getElementById('contactForm').reset();
+                    document.getElementById('contactSuccess').classList.remove('hidden');
+                    setTimeout(() => {
+                        document.getElementById('contactSuccess').classList.add('hidden');
+                    }, 5000);
+                } else {
+                    alert("Error enviando el mensaje.");
+                }
+            } catch (error) {
+                alert("Error de red.");
+            } finally {
+                btn.innerText = originalText;
+                btn.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html>
